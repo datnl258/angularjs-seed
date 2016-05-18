@@ -32,18 +32,19 @@ var configs = {
         './app/assets/js/respond.min.js'
     ],
     'modulesJS': './app/modules/**/*.js',
-    'coreCSS': [
-        './app/sass/core.scss'
-    ],
+    'coreCSS': './app/sass/core.scss',
+    'styleCSS': './app/sass/style.scss',
     'moduleCSS': './app/modules/**/*.scss',
     'fonts': './app/assets/fonts',
     'images': './app/assets/img',
     'indexHTML': './app/index.html',
-    'viewHTML': './app/modules/**/*.html'
+    'viewHTML': './app/modules/**/*.html',
+    'partialsHTML': './app/partials/**/*.html'
 };
 
 elixir(function (mix) {
     mix.sass(configs.coreCSS, './www/assets/css/core.css')
+        .sass(configs.styleCSS, './www/assets/css/style.css')
         .sass(configs.moduleCSS, './www/assets/css/modules.css')
         .scripts(configs.coreJS, './www/assets/js/core.js')
         .scripts(configs.libsJS, './www/assets/js/libs.js')
