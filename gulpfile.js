@@ -14,7 +14,7 @@ var configs = {
         './app/assets/js/ui-router.min.js'
     ],
     'libsJS': [
-        './app/assets/js/jquery.js',
+        './app/assets/js/jquery.min.js',
         './app/assets/js/lodash.js'
     ],
     'appJS': [
