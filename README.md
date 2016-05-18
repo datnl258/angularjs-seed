@@ -3,4 +3,5 @@
 ```
 npm install
 npm install -g eslint
+gulp
 ```
