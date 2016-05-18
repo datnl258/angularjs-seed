@@ -1,3 +1,1 @@
-/**
- * Created by tuannda on 18/05/2016.
- */
+angular.module('QSoft.constants', []);

@@ -11,7 +11,8 @@ var configs = {
         './app/assets/js/angular-sanitize.min.js',
         './app/assets/js/restangular.min.js',
         './app/assets/js/ui-bootstrap.min.js',
-        './app/assets/js/ui-router.min.js'
+        './app/assets/js/ui-router.min.js',
+        './app/assets/js/ngMeta.min.js'
     ],
     'libsJS': [
         './app/assets/js/jquery.min.js',
