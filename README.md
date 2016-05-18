@@ -3,5 +3,5 @@
 ```
 npm install
 npm install -g eslint
-gulp
+gulp && gulp watch
 ```

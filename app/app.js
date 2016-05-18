@@ -1,0 +1,1 @@
+var SMC596 = angular.module('SMC596', ['QSoft.routers']);

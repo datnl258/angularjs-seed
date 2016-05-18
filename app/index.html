@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="SMC596">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,15 +12,24 @@
     <![endif]-->
 </head>
 <body>
-    <div ui-view="viewA"></div>
-    <div ui-view="viewB"></div>
-    <!-- Also a way to navigate -->
-    <a ui-sref="route1">Route 1</a>
-    <a ui-sref="route2">Route 2</a>
-    <script src="/assets/js/core.js"></script>
-    <script src="/assets/js/core.js"></script>
-    <script src="/assets/js/libs.js"></script>
-    <script src="/assets/js/app.js"></script>
-    <script src="/assets/js/modules.js"></script>
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#">Quick Start</a>
+            <ul class="nav">
+                <li><a ui-sref="state1">Route 1</a></li>
+                <li><a ui-sref="state2">Route 2</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div ui-view></div>
+    </div>
+</div>
+<!--Footer-->
+<script src="/assets/js/core.js"></script>
+<script src="/assets/js/libs.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/modules.js"></script>
 </body>
 </html>

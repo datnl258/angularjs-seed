@@ -1,24 +1,26 @@
-angular.module('app.routers').config(function ($stateProvider) {
+angular.module('QSoft.routers', ['ui.router']).config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/state1");
     $stateProvider
-        .state('index', {
-            url: "",
-            views: {
-                "viewA": {template: "index.viewA"},
-                "viewB": {template: "index.viewB"}
-            }
+        .state('state1', {
+            url: "/state1",
+            templateUrl: "/views/home/partials/state1.html"
         })
-        .state('route1', {
-            url: "/route1",
-            views: {
-                "viewA": {template: "route1.viewA"},
-                "viewB": {template: "route1.viewB"}
-            }
+        .state('state1.list', {
+            url: "/list",
+            templateUrl: "/views/home/partials/state1.list.html",
+            controller: ['$scope', function ($scope) {
+                $scope.items = ["A", "List", "Of", "Items"];
+            }]
         })
-        .state('route2', {
-            url: "/route2",
-            views: {
-                "viewA": {template: "route2.viewA"},
-                "viewB": {template: "route2.viewB"}
-            }
+        .state('state2', {
+            url: "/state2",
+            templateUrl: "/views/home/partials/state2.html"
+        })
+        .state('state2.list', {
+            url: "/list",
+            templateUrl: "/views/home/partials/state2.list.html",
+            controller: ['$scope', function ($scope) {
+                $scope.things = ["A", "Set", "Of", "Things"];
+            }]
         });
-});
+}]);
