@@ -1,5 +1,6 @@
 # angularjs-seed
 
 ```
-npm install -g jshint
+npm install
+npm install -g eslint
 ```
