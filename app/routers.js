@@ -4,15 +4,18 @@ angular.module('QSoft.routers', ['ui.router']).config(['$stateProvider', '$urlRo
     $stateProvider
         .state('home', {
             url: '/',
-            metaData: {
-                title: 'SMC566 APP',
-                description: 'xxx',
-                keywords: 'xxx'
+            meta: {
+                title: 'Homepage',
+                description: ''
             },
             templateUrl: '/views/home/partials/state1.html'
         })
         .state('404', {
             url: '/404',
+            meta: {
+                title: 'Oops! Page Not Found',
+                description: ''
+            },
             templateUrl: '/views/404/404.html'
         });
 }]);
