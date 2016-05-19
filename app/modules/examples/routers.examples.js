@@ -11,14 +11,18 @@ angular.module('QSoft.routers').config(['$stateProvider', function ($stateProvid
             templateUrl: '/views/examples/examples.html'
         })
         .state('examples.course', {
-            url:'/:course',
+            url:'/{course}',
             parent: 'examples',
             meta: {
                 title: 'Example :course',
                 description: ''
             },
-            controller: 'ExamplesCourseCtrl',
-            controllerAs: 'ExamplesCourseCtrlAs',
-            templateUrl: '/views/examples/course/course.html'
+            views: {
+                "@" : {
+                    controller: 'ExamplesCourseCtrl',
+                    controllerAs: 'ExamplesCourseCtrlAs',
+                    templateUrl: '/views/examples/course/course.html'
+                }
+            }
         });
 }]);
